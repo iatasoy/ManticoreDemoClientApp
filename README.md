@@ -2,6 +2,8 @@
 
 A simple PHP client application to interact with **Manticore Search** to perform search queries on customer data indexed from a MySQL database.
 
+For more detail https://medium.com/@iskenderatasoy/manticore-search-engine-fast-database-for-search-bfce7b63b8b1
+
 ## Prerequisites
 
 Before running the application, ensure that the following are installed and properly configured:
