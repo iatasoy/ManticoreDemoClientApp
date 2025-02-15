@@ -1,0 +1,7 @@
+{
+    "require": {
+        "bcosca/fatfree-core": "^3.9",
+        "guzzlehttp/guzzle": "^7.9",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
