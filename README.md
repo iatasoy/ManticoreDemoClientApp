@@ -97,12 +97,171 @@ You can test the functionality by visiting the following URLs:
 ```
 Home Page: http://localhost:8080/
 Displays a simple message: "Manticore Backend demo application".
+```
 
-Search Customer Page: http://localhost:8080/search/{search_term}
-Perform search queries (e.g., http://localhost:8080/search/john).
+```
+Search Customer Page: http://localhost:8080/customers/search/{search_term}
+Perform search queries (e.g., http://localhost:8080/customers/search/john+martin).
 
+{
+  "success": true,
+  "status": 200,
+  "message": "Customer search results",
+  "data": {
+    "took": 3,
+    "timed_out": false,
+    "hits": {
+      "total": 1543,
+      "total_relation": "eq",
+      "hits": [
+        {
+          "_id": 901,
+          "_score": 3573,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "john.thomas213@example.com",
+            "phone": "+90168596903",
+            "creationdate": "2025-02-13 16:53:30"
+          }
+        },
+        {
+          "_id": 4729,
+          "_score": 3573,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "john.anderson793@example.com",
+            "phone": "+90355355205",
+            "creationdate": "2025-02-13 17:15:56"
+          }
+        },
+        {
+          "_id": 6597,
+          "_score": 3573,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "john.thomas215@example.com",
+            "phone": "+90208468622",
+            "creationdate": "2025-02-13 17:16:00"
+          }
+        },
+        {
+          "_id": 9519,
+          "_score": 3573,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "john.anderson826@example.com",
+            "phone": "+90474101038",
+            "creationdate": "2025-02-13 17:16:06"
+          }
+        },
+        {
+          "_id": 185,
+          "_score": 2563,
+          "_source": {
+            "firstname": "Paul",
+            "lastname": "Martin",
+            "email": "john.anderson761@example.com",
+            "phone": "+90231180601",
+            "creationdate": "2025-02-13 16:53:28"
+          }
+        },
+        {
+          "_id": 549,
+          "_score": 2563,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "joshua.miller656@example.com",
+            "phone": "+90456622264",
+            "creationdate": "2025-02-13 16:53:29"
+          }
+        },
+        {
+          "_id": 941,
+          "_score": 2563,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "michael.thompson327@example.com",
+            "phone": "+90907173359",
+            "creationdate": "2025-02-13 16:53:30"
+          }
+        },
+        {
+          "_id": 1063,
+          "_score": 2563,
+          "_source": {
+            "firstname": "Donald",
+            "lastname": "Martin",
+            "email": "john.anderson945@example.com",
+            "phone": "+90957705174",
+            "creationdate": "2025-02-13 17:15:49"
+          }
+        },
+        {
+          "_id": 1638,
+          "_score": 2563,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "michael.thompson290@example.com",
+            "phone": "+90772545546",
+            "creationdate": "2025-02-13 17:15:50"
+          }
+        },
+        {
+          "_id": 1721,
+          "_score": 2563,
+          "_source": {
+            "firstname": "Donald",
+            "lastname": "Martin",
+            "email": "john.taylor122@example.com",
+            "phone": "+90744809837",
+            "creationdate": "2025-02-13 17:15:50"
+          }
+        }
+      ]
+    }
+  }
+}
+
+```
+
+```
 Search Customer by ID: http://localhost:8080/customer/{customer_id}
-Search for a specific customer by ID.
+Perform search queries (e.g., http://localhost:8080/customers/901).
+Success Response
+
+{
+  "success": true,
+  "status": 200,
+  "message": "Customer details",
+  "data": {
+    "took": 0,
+    "timed_out": false,
+    "hits": {
+      "total": 1,
+      "total_relation": "gte",
+      "hits": [
+        {
+          "_id": 901,
+          "_score": 1,
+          "_source": {
+            "firstname": "John",
+            "lastname": "Martin",
+            "email": "john.thomas213@example.com",
+            "phone": "+90168596903",
+            "creationdate": "2025-02-13 16:53:30"
+          }
+        }
+      ]
+    }
+  }
+}
 ```
 
 ### Error Handling
